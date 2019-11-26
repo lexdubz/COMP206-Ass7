@@ -1,0 +1,179 @@
+<!doctype html>
+<html land="eng" class="gr__cs_mcgill_ca" wtx-context="CAE238D5-9405-4DAA-BD31-1F861BAC11B3">
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			* {
+			box-sizing: border-box;
+			}
+
+			/*style the body*/
+			body {
+				font-family: Arial, Helvetica, sans-sherif;
+				margin: 0;
+			}
+
+			/* header/logo title*/
+			.header {
+				padding: 80px;
+				text-align: center;
+				background: #1abc9c;
+				color: white;
+			}
+
+			/* increase the font size of the heading */
+			.header h1 {
+				font-size: 40px;
+			}
+
+			/* sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like positio:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+			.navbar {
+				overflow: hidden;
+				background-color: #333;
+				position: sticky;
+				position: -webkit-sticky;
+				top: 0;
+			}
+
+			
+			.navbar a {
+				float: left;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 20px;
+				text-decoration: none;
+			}
+
+			/* right aligned link */
+			.navbar a.right {
+				float: right;
+			}
+
+			/* change color on hover */
+			.nav a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+
+			/* active/current link */
+			.navbar a.active {
+				background-color: #666;
+				color: white;
+			}
+
+			/* column container */
+			.row {
+				display: -ms-flexbox; /* IE10 */
+				display: flex;
+				-ms-flex-wrap: wrap; /* IE10 */
+				flex-wrap: wrap;
+			}
+
+			/* create two unequal columns that sits next to each other */
+			/* sidebar/left column */
+			.side {
+				-ms-flex: 30%; /*IE10 */
+				flex: 30%;
+				background-color: #fififi;
+				padding: 20px;
+			}
+
+			/* main column */
+			.main {
+				-ms-flex: 70%; /* IE10 */
+				flex: 70%;
+				background-color: white;
+				padding: 20px;
+			}
+
+			/* fake image, just for this example */
+			.fakeimg {
+				background-color: #aaa;
+				width: 100%;
+				padding: 20px;
+			}
+
+			/* footer */
+			.footer {
+				padding: 20px;
+				text-align: center;
+				background: #ddd;
+			}
+
+			/* responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to eachother */
+			@media screen and (max-width: 700px) {
+				.row {
+					flex-direction:column;
+				}
+			}
+
+			/* responsive layout - when the screen is less than 400 px wide, make the navigation links stack on top of each other instead of next to each other */
+			@media screen and (max width: 400 px) {
+				.navbar a {
+					float: none;
+					width: 100;
+				}
+			}
+
+		</style>
+	</head>
+	<body data-gr-c-s-loaded="true">
+		<div class="header">
+			<h1>My Website</h1>
+			<p>
+			"A "
+			<b>responsive</b>
+			" Website created by me."
+			</p>
+		</div>
+		<div class="navbar">
+			<a href="#" class="active">Home</a>
+			<a href="#">Link</a>
+			<a href="#">Link</a>
+			<a href="#" class="right">Link</a>
+		</div>
+		<div class="row">
+			<div class="side">
+				<h2>About Me</h2>
+				<h5>Photo of me:</h5>
+				<div class="fakeimg" style="height:200px;">Image</div>
+				<p>Some text about me...</p>
+				<h3>More Text</h3>
+				<p>Random stuff</p>
+				<div class"fakeimg" style="height:60px;">Image</div>
+				<br>
+				<div class="fakeimg" style="height:60px;">Image</div>
+				<br>
+				<div class="fakeimg" style="height:60px;">Image</div>
+			</div>
+			<div class="main">
+				<h2>Title Heading</h2>
+				<h5>Title description, Dec 7, 2017</h5>
+				<div class="fakeimg" style="height:200px;">Image</div>
+				<p>Some text...</p>
+				<br>
+				<h2>TITLE HEADING</h2>
+				<h5>Title description, Sep 2, 2017</h5>
+				<div class="fakeimg" style="height:200px;">Image</div>
+				<p>Some additional text...</p>
+			</div>
+		</div>
+		<div class="footer">
+			<h2>Footer</h2>
+		</div>
+		"
+
+
+
+		.
+		"
+		</body>
+</html>
+
+
+
+
+
