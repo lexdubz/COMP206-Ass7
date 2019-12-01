@@ -9,25 +9,22 @@ void main() {
 	
 	//payload loosk like : /cgi-bin/answer?input=answer
 	char *data = getenv("QUERY_STRING");
-
-	//create a token seperated array to extract the payload data
-	char *firstTok = strtok(data,"=&");
+	
 
 	//assuming the payload looks like: "[URL]/answer?input=Command&gold=50"
-	//the first token contains the name of the CGI variable we ask the user to fill-out
-	//the second token contains the user's input
-	//the third and fourth tokens are potentially optional, we must check to make sure
-	//the third field is the CGI hidden variable
-	//the fourth field is the amount of gold - don't assume it's an int
+	//separate the payload using tokens
+	
+	char *firstTok;
 	int goldPc;
 	char *command;
+	firstTok = strtok(data,"=");
 	if(strcmp(firstTok,"input")==0){
-		command = strtok(NULL,"=&");
-		if(strtok(NULL,"&=")==NULL) goldPc =10;
+		command = strtok(NULL,"&");
+		if(strtok(NULL,"=")==NULL) goldPc =10;
 		else goldPc =atoi(strtok(NULL,""));
 	} else {
-		goldPc = atoi(strtok(NULL,"&="));
-		if(strtok(NULL,"=&")==NULL) command = strtok(NULL,"");
+		goldPc = atoi(strtok(NULL,"&"));
+		if(strtok(NULL,"=")!=NULL) command = strtok(NULL,"");
 	}
 
 
